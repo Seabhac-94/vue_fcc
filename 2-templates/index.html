@@ -13,28 +13,15 @@
 <body>
 
     <div id="app">
-        {{ alert }}
-        {{ projects }}
+        <!-- expected to fail as not using directive-->
+        <h1>{{ titleHTML }}</h1>
+        <!--Using directive-->
+        <h2 v-html="titleHTML"></h2>
     </div>
 
 
     <script src="./main.js"></script>
-    <script>
-        //access alert property
-        console.log(app.alert)
-        //update property value
-        app.alert = 'I am a new alert message'
-        console.log(app.alert)
-        console.log(app.projects)
-        //access the entry data object
-        console.log(app._data)
-        console.log(app.$data)
 
-        console.log(app.$options)
-        console.log(app.$watch)
-        console.log(app.$on)
-
-    </script>
 </body>
 
 </html>
